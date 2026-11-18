@@ -77,5 +77,6 @@ struct SearchView: View {
             }
         }
         .scrollContentBackground(.hidden)
+        .scrollDismissesKeyboard(.interactively)
     }
 }

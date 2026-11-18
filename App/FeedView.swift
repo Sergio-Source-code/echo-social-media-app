@@ -14,6 +14,7 @@ struct FeedView: View {
                 }
                 .padding()
             }
+            .scrollIndicators(.hidden)
             .background(Theme.background.ignoresSafeArea())
             .navigationTitle("Echo")
             .toolbar {
@@ -23,6 +24,8 @@ struct FeedView: View {
                     } label: {
                         Image(systemName: "square.and.pencil")
                     }
+                    .accessibilityLabel("New post")
+                    .sensoryFeedback(.impact, trigger: showCompose)
                 }
             }
             .sheet(isPresented: $showCompose) {
